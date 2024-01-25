@@ -4,11 +4,13 @@ using namespace std;
 int main()
 {
     int returnTotalBill(void);
-int totalAmount = returnTotalBill();
-cout<<"---------------------------------------------Your Total Bill Amount is: Rs "<<totalAmount<<"---------------------------------"<<endl<<endl;
-cout<<"---------------------------------------------------Thankyou for your order!---------------------------"<<endl;
+    int totalAmount = returnTotalBill();
+    cout << "---------------------------------------------Your Total Bill Amount is: Rs " << totalAmount << "---------------------------------" << endl
+         << endl;
+    cout << "---------------------------------------------------Thankyou for your order!---------------------------" << endl;
 }
-int returnTotalBill(){
+int returnTotalBill()
+{
     char c;
     char item;
     char vegItem;
@@ -64,18 +66,20 @@ start:
                 cout << "you have entered wrong value, please try again !" << endl;
                 goto vegItem;
             }
-            cout<<"Do you want to add more items, press y or n ?"<<endl;
-            cin>>selectItem;
-            if(selectItem== 'y' || selectItem=='Y'){
+            cout << "Do you want to add more items, press y or n ?" << endl;
+            cin >> selectItem;
+            if (selectItem == 'y' || selectItem == 'Y')
+            {
                 goto item;
-            }else{
+            }
+            else
+            {
                 return billAmount;
             }
-            
         }
         else if (item == 'b' || item == 'B')
         {
-            nonVegItem:
+        nonVegItem:
             cout << "please press (1)chicken   price: RS-250" << endl;
             cout << "please press (2)Biryani   price: RS-250" << endl;
             cout << "please press (3)mutton  price: RS-600" << endl;
@@ -107,11 +111,14 @@ start:
                 cout << "you have entered wrong value, please try again !" << endl;
                 goto nonVegItem;
             }
-            cout<<"Do you want to add more items, press y or n ?"<<endl;
-            cin>>selectItem;
-            if(selectItem== 'y' || selectItem=='Y'){
+            cout << "Do you want to add more items, press y or n ?" << endl;
+            cin >> selectItem;
+            if (selectItem == 'y' || selectItem == 'Y')
+            {
                 goto item;
-            }else{
+            }
+            else
+            {
                 return billAmount;
             }
         }
@@ -126,5 +133,5 @@ start:
         cout << "you have entered wrong value, please press 's'" << endl;
         goto start;
     }
-    cout<<billAmount;
+    cout << billAmount;
 }
